@@ -1,4 +1,4 @@
-# Aula 3.1 - Exercício
+# Repositório dos Exercícios das Aulas Ao Vivo
 Este repositório foi um acompanhamento do aprendizado obtido através da aula da Turma 15.B
 Para o arquivo basta acessar:
 ```
