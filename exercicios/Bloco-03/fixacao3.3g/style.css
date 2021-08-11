@@ -1,0 +1,56 @@
+.header{
+ color: red;
+}
+
+.bigcase{
+    font-size: 40px;
+    border: 1px solid black;
+}
+
+ol li{
+    background-color: yellow;
+}
+
+ol li.par{
+    color: green;
+}
+
+ol li.impar{
+    text-transform: uppercase;
+}
+
+li{
+    font-size: 20px;
+}
+
+li em{
+    font-weight: bold;
+}
+
+.blue{
+    color: blue;
+}
+
+.javashare{
+    background-color: pink;
+}
+
+a:hover{
+    font-weight: bold;
+}
+
+.orangelink:hover{
+    color: orange;
+}
+
+.greenlink:hover{
+    color: green;
+}
+
+.blacklink:hover{
+    color: black;
+}
+
+.yellowlink:hover{
+    color: yellow;
+}
