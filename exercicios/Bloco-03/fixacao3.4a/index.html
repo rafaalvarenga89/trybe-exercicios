@@ -7,11 +7,44 @@
 </head>
 <body>
     <header id="header">Cabeçalho</header>
-    <nav id="nav">Links de Navegação</nav>
+    <nav id="nav">
+        <ul class="nav-links">
+            <li><a href="">Home</a></li>
+            <li><a href="">Contato</a></li>
+            <li><a href="">Perfil</a></li>
+        </ul>
+    </nav>
     <main id="group">
         <article id="article">
-            Artigo
-            <section id="section">Seção</section>
+            <h1>Entendendo a diferença entre elementos block e inline</h1>
+            <section id="section">
+                <h2>Elementos Block</h2>
+                <p>Exemplos: div, section, ul, li, header, p, etc...</p>
+                <ol>
+                    <li>Ocupam 100% da largura do elemento pai;</li>
+                    <li>Ocupam a própria linha, sendo posicionados abaixo do elemento anterior;</li>
+                    <li>A altura padrão é definida pelo tamanho do conteúdo;</li>
+                    <li>É possível alterar as propriedades de tamanho e largura;</li>
+                    <li>É possível alterar todas as propriedades de margem.</li>
+                </ol>
+            </section>
+            <section id="section">
+                <h2>Elementos inline</h2>
+                <p>Exemplos: a, span, b, i, etc...</p>
+                <ol>
+                    <li>Ocupam a largura do próprio conteúdo;</li>
+                    <li>Dois ou mais elementos inline em sequência, são posicionados lado a lado;</li>
+                    <li>Não é possível alterar as propriedades de altura e largura;</li>
+                    <li>Somente é possível alterar as margens horizontais;</li>
+                    <li>Ao aplicar float, automaticamente se transformam em elementos block;</li>
+                    <li>Se comporta como um texto.</li>
+                </ol>
+
+            </section>
+            <section>
+                <h2>Elementos Inline-block</h2>
+
+            </section>
         </article>
         <aside id="aside">Barra Lateral</aside>
     </main>
