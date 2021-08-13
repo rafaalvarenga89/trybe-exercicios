@@ -1,0 +1,64 @@
+body{
+    background-color: #00ffff;
+    font-size: 20px;
+    padding: 3%;
+}
+
+footer{
+    text-align: center;
+    font-size: 0.75em;
+}
+
+.summary li{
+    display: inline-block;
+    margin-left: 18%;
+    text-align: center;
+}
+
+.description{
+    display: inline-block;
+
+}
+
+.description img{
+    float: left;
+    width:300px;
+}
+
+.description p{
+    padding: 3% ;
+    padding-left: 310px;
+    text-align: justify;
+}
+
+
+
+.infoTable td{
+    border: 1px solid #000000;
+}
+
+.powerfulBlow {
+    display: inline-block;
+}
+
+.powerfulBlow img{
+    float: right;
+    width: 300px;;
+}
+
+.powerfulBlow p {
+    padding: 10%;
+    padding-left: 10px;
+    padding-right: 310px;
+    text-align: justify;
+}
+
+.bibliographic {
+    font-size: 0.8em;
+
+}
+
+.bibliographic a{
+    text-decoration: none;
+    color: #000000;
+}
