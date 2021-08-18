@@ -1,0 +1,19 @@
+* {
+    border: 1px solid black;
+}
+main { 
+    background-color: aqua;
+    height: 1100px;
+}
+
+section {
+    background-color: bisque;
+}
+
+.codigo{
+    background-color: red;
+}
+
+#a1 , #a2  {
+    background-color: green;
+}
