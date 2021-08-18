@@ -1,3 +1,5 @@
+// VARIÁVEIS
+
 // let age = 20;
 // console.log(age)
 
@@ -14,3 +16,13 @@
 // let birthYear = 1989;
 // birthYear = 2030;
 // console.log('Ano de Nascimento:' + birthYear);
+
+// -----------------------------------------------------------------------
+
+// 2. JAVASCRIPT -TIPOS PRIMITIVOS, TIPAGEM DINÂMICA E OPERAÇÕES ARITMÉTICAS
+
+let movie = 'Avengers'; //string value;
+let score = 10.89; //number value;
+let isValid = true; //boolean value;
+let name; //undefined
+let color = null; // redefinição
