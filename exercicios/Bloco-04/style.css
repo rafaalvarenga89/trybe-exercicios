@@ -3,7 +3,7 @@
 }
 main { 
     background-color: aqua;
-    height: 5000px;
+    height: 10000px;
 }
 
 section {
@@ -27,10 +27,15 @@ h3 {
     padding: 10px;
 }
 
+ul , ol {
+     padding: 30px; 
+}
+
 
 
 .codigo{
     background-color: red;
+    padding: 10px;
 }
 
 .resposta {

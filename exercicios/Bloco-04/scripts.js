@@ -100,7 +100,7 @@ document.getElementById("a10").innerHTML+= '<p>'+resposta+'</p>';
 }
 
 function candidate(note) {
-    if(note < 0 && note > 100) {
+    if(note < 0 || note > 100) {
         return 'A nota inserida não é válida'
     }
 
@@ -122,10 +122,3 @@ let note = parseFloat(document.getElementById("nota").value);
 let resposta2 = candidate(note);
 document.getElementById("a11").innerHTML+= '<p>'+resposta2+'</p>';
 }
-
-
-
-
-
-
-
