@@ -91,16 +91,39 @@ function horario (trybe) {
     }
 
 }
-
+document.getElementById("a10").innerHTML = '<h3>Resposta:</h3>';
 document.getElementById("verCondicao").onclick = function () {
 document.getElementById("a10").innerHTML = '<h3>Resposta:</h3>';
 let trybe = parseFloat(document.getElementById("trybe").value);             
 let resposta = horario(trybe);
 document.getElementById("a10").innerHTML+= '<p>'+resposta+'</p>';
-
-
-
 }
+
+function candidate(note) {
+    if(note < 0 && note > 100) {
+        return 'A nota inserida não é válida'
+    }
+
+    else if (note >=80 && note <= 100) {
+        return 'Parabéns! Você foi aprovado(a)!'
+    
+    }
+    else if (note >= 60 && note < 80) {
+        return 'Você está na nossa lista de espera.'
+    }
+    else {
+        return 'Você foi reprovada(o)!'
+    }
+}
+document.getElementById("a11").innerHTML = '<h3>Resposta:</h3>';
+document.getElementById("verCondicao2").onclick = function () {
+document.getElementById("a11").innerHTML = '<h3>Resposta:</h3>';
+let note = parseFloat(document.getElementById("nota").value);             
+let resposta2 = candidate(note);
+document.getElementById("a11").innerHTML+= '<p>'+resposta2+'</p>';
+}
+
+
 
 
 
