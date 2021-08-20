@@ -32,6 +32,6 @@ function hora(currentHour) {
     // document.getElementById("resposta").innerHTML = '<h3>Resposta:</h3>';
      let currentHour = parseFloat(document.getElementById("hora").value);
      let resposta = hora(currentHour);
-         document.getElementById("resposta").innerHTML= '<h3>Resposta: '+resposta+'</h3>';
+         document.getElementById("resposta").innerHTML= '<h3>Resposta: <span>'+resposta+'</span></h3>';
      }
 
