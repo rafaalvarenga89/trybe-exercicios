@@ -25,6 +25,9 @@ button {
     font-weight: bolder;
       
 }
+#resposta {
+    padding: 20px;
+}
 
 .cond {
     padding: 30px;
