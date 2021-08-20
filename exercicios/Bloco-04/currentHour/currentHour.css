@@ -1,0 +1,32 @@
+* {
+    border: 1px solid orange;
+    background-color: aquamarine;
+    margin: auto;
+}
+
+body {
+    font-size: 20px;
+}
+
+input {
+    background-color: white;
+    margin-left: 15%;
+    padding: 25px;
+    display: inline-block;
+    float: left;
+}
+
+button {
+    padding: 25px;
+    margin-left: 2.5%;
+    display: inline-block;
+    background-color: blue;
+    color: aqua;
+    font-weight: bolder;
+      
+}
+
+.cond {
+    padding: 30px;
+    padding-left: 0.5;
+}
