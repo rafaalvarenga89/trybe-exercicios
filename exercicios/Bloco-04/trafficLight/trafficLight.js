@@ -1,15 +1,37 @@
-let trafficLight = "roxo";
+var title = document.querySelector("#title");
 
-switch (trafficLight) {
-    case "vermelho":
-        console.log("Pare.");
+title.style.color = "green";
+
+
+
+
+document.getElementById("verCondicao").onclick = function () {
+
+    let trafficLight = document.getElementById("color").value;
+    let color = document.querySelector("#resp");
+
+
+
+ switch (trafficLight) {
+     case "vermelho":
+        color.style.backgroundColor = "red";
+         document.getElementById("resp").innerHTML = '<output>Resposta: Pare! </output>';
         break;
-    case "amarelo":
-        console.log("Atenção!");
+        
+     case "amarelo":
+        color.style.backgroundColor = "yellow";
+        document.getElementById("resp").innerHTML = '<output>Resposta: Atenção! </output>';
         break;
-    case "verde":
-        console.log("Siga.");
+        
+        
+     case "verde":
+        color.style.backgroundColor = "green";
+        document.getElementById("resp").innerHTML = '<output>Resposta: Siga! </output>';
         break;
-    default:
-        console.log("Valor não identificado.")
+
+     default:
+        color.style.backgroundColor = "grey";
+        document.getElementById("resp").innerHTML = '<output>Resposta: Valor não encontrado! </output>';
+        break;
+    }
 }
