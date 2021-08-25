@@ -10,9 +10,9 @@ cohort = 'turma 16-B'; //String; // Tipagem: Fraca
 console.log(cohort);
 console.log(company);
 
-let mybox;
+let mybox;              //undefined
 
-mybox = null;
+mybox = null;           //null
 console.log(mybox);
 
 let number1 = 23;
@@ -27,4 +27,5 @@ if(number1 > number2) { //se
 age = 18;
 
 age += 1;
+
 console.log(age)
