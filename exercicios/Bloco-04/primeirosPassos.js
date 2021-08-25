@@ -46,4 +46,30 @@ if(ex3num1 > ex3num2) {
 
 }
 
+// 4.
 
+const ex4num4 = -10000;
+
+if (ex4num4 > 0){
+    console.log('positive');
+} else {
+    console.log('negative');
+}
+
+// 5.
+
+const ang1 = 120;
+const ang2 = 30;
+const ang3 = 30;
+let triangulo = 0;
+
+if(ang1 < 0 || ang2 < 0 || ang3 < 0){
+    console.log('Valor Inválido!')
+} else {
+    if(ang1 + ang2 + ang3 === 180) {
+        triangulo = true;
+    } else {
+        triangulo = false;
+    }
+    console.log(triangulo)
+}
