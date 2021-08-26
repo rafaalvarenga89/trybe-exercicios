@@ -73,3 +73,73 @@ if(ang1 < 0 || ang2 < 0 || ang3 < 0){
     }
     console.log(triangulo)
 }
+
+// 7.
+
+const nota7 = 5;
+
+if(nota7 < 0 || nota7 > 100) {
+    console.log ("Nota inválida");
+} else if (nota7 >= 90 && nota <= 100) {
+    console.log("A");
+} else if (nota7 >= 80 && nota < 90) {
+    console.log("B");
+} else if (nota7 >= 70 && nota < 80) {
+    console.log("C");
+} else if (nota7 >= 60 && nota < 70) {
+    console.log("D")
+} else if (nota7 >= 70 && nota < 60) {
+    console.log("E")
+} else {
+    console.log("F");
+}
+
+// 8. 
+
+const ex8num1 = 1;
+const ex8num2 = 6;
+const ex8num3 = 5;
+let modulo = '';
+
+if (ex8num1 % 2 === 0 || ex8num2 % 2 === 0  || ex8num3 % 2 === 0) {
+    modulo = true;
+} else {
+    modulo = false;
+}
+
+console.log(modulo);
+
+// 9.
+
+const ex9num1 = 2;
+const ex9num2 = 6;
+const ex9num3 = 4;
+let modulo9 = '';
+
+if (ex9num1 % 2 !== 0 || ex9num2 % 2 !== 0  || ex9num3 % 2 !== 0) {
+    modulo9 = true;
+} else {
+    modulo9 = false;
+}
+
+console.log(modulo9);
+
+// 10. 
+
+const custoProduto = 1;
+const valorDeVenda = 1.5;
+let produto = 1000;
+let impostoCusto = 0.2 * custoProduto;
+
+if (custoProduto < 0 || valorDeVenda < 0 || produto <0 || impostoCusto < 0) {
+    console.log ("Erro");
+} else {
+   let valorCustoTotal = custoProduto + impostoCusto;  
+   let lucro = produto *(valorDeVenda - valorCustoTotal);
+    if (lucro < 0) {
+        console.log("Erro");
+    } else {
+        console.log(lucro);
+    }
+
+}
