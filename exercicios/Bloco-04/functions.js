@@ -74,3 +74,30 @@ function smaller(array){
 
 console.log(smaller([2, 3, 6, 7, 10, 1]));
 
+// 4.
+
+function bigName (arrayNomes) {
+
+console.log(arrayNomes[1].length);
+
+let biggerNameAmount = '';
+let biggerNameIndex = '';
+let biggerName = '';
+
+for (let amountIndex = 0; amountIndex < arrayNomes.length; amountIndex++){
+    if (biggerNameAmount < arrayNomes[amountIndex].length) {
+        biggerNameAmount = arrayNomes[amountIndex].length;
+        biggerNameIndex = amountIndex;
+        biggerName = arrayNomes[amountIndex];
+    } else {
+        biggerNameAmount = biggerNameAmount;
+        biggerNameIndex = biggerNameIndex;
+        biggerName = biggerName;
+    }
+    
+}
+return biggerName;
+
+}
+
+console.log (bigName(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
