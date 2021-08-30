@@ -101,3 +101,47 @@ return biggerName;
 }
 
 console.log (bigName(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+
+// 5.
+function numberMostAppear(repeatArray) {
+ 
+let singleObject = {};
+let singleArray = [];
+let maiorNumero = 0;
+let quantidade = 0; 
+
+
+for(let index = 0; index < repeatArray.length; index++) {
+    singleObject[repeatArray[index]] = repeatArray[index];
+}
+
+for (let key in singleObject) {
+    singleArray.push(key);    
+}
+
+
+for(let index2 = 0; index2 < singleArray.length; index2++) {
+    let numero = singleArray[index2];
+    let contador = {};
+    contador[numero] = 0;  
+    for (let index3 = 0; index3 < repeatArray.length; index3++) {
+        if(numero == repeatArray[index3]) {
+            contador[numero] = contador[numero] + 1; 
+        } else {
+            contador[numero] = contador[numero];
+        }
+    }
+
+
+        for(let key in contador) {
+              if(quantidade < contador[numero]) {
+                quantidade = contador[numero];
+                maiorNumero = key;
+            } 
+            
+        } 
+     
+}
+return maiorNumero;
+}
+console.log(numberMostAppear([2, 3, 2, 5, 8, 2, 3]));
