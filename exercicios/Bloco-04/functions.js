@@ -147,8 +147,8 @@ return maiorNumero;
 console.log(numberMostAppear([2, 3, 2, 5, 8, 2, 3]));
 
 // 6.
+function soma(n) {
 
-let n = 5;
 let somatorio = 0;
 
 for(let index = 1; index <= n; index++){
@@ -156,6 +156,12 @@ for(let index = 1; index <= n; index++){
     somatorio = somatorio + index;
 } 
 
+return somatorio;
+
+}
+
+console.log(soma(5));
 
 
-console.log(somatorio);
+// 7.
+
