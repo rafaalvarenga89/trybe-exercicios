@@ -145,3 +145,17 @@ for(let index2 = 0; index2 < singleArray.length; index2++) {
 return maiorNumero;
 }
 console.log(numberMostAppear([2, 3, 2, 5, 8, 2, 3]));
+
+// 6.
+
+let n = 5;
+let somatorio = 0;
+
+for(let index = 1; index <= n; index++){
+    
+    somatorio = somatorio + index;
+} 
+
+
+
+console.log(somatorio);
