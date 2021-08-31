@@ -164,4 +164,21 @@ console.log(soma(5));
 
 
 // 7.
+function verificaFimPalavra(stringWord, stringEnding) {
 
+let resultado = '';
+resultado = stringWord.substring(stringWord.length-stringEnding.length);
+let equalStringEnding;
+
+if(resultado == stringEnding) {
+    equalStringEnding = true;
+} else {
+    equalStringEnding = false;
+}
+
+return equalStringEnding;
+
+}
+
+console.log(verificaFimPalavra('trybe', 'be'));
+console.log(verificaFimPalavra('joaofernando', 'fernan'));
