@@ -19,10 +19,24 @@ for (let index = 0; index < ingredientItens.length; index += 1) {
 
     let ingredientListItem = document.createElement('li');
     ingredientListItem.innerText = ingredient;
+    ingredientListItem.className = 'ingredients-list-item';
 
     ingredientList.appendChild(ingredientListItem);
 
 }
+
+
+let ingredientListItens = document.querySelectorAll('.ingredients-list-item');
+console.log(ingredientListItens);
+
+for (index = 0; index < ingredientListItens.length; index += 1) {
+    let element = ingredientListItens[index];
+
+    if(element.innerText.includes('toucinho')) {
+        ingredientList.removeChild(element);
+    }
+}
+
 
 let recipePreparationSteps = [
 
@@ -42,3 +56,5 @@ for (let index2 = 0; index2 < recipePreparationSteps.length; index2 += 1) {
     recipeSteps.innerText = steps;
     recipePreparation.appendChild(recipeSteps);
 }
+
+
