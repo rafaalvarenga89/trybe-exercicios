@@ -61,8 +61,78 @@ let ulLi = [
     'Dez'
 ]
 
+
+// Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um , dois , três , ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+
+
 sectionR = document.querySelector('.right-content');
+let ul = document.createElement('ul');
+sectionR.appendChild(ul);
+
 for(index = 0; index < ulLi.length; index += 1 ) {
-    let li = document.createElement(ulLi[index]);
-    sectionR.appendChild(li);
+    let li = ulLi[index];
+    
+    li = document.createElement('li');
+    li.innerText = ulLi[index];
+
+    
+    ul.appendChild(li);
 }
+
+
+// Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
+
+main = document.querySelector('main');
+for (index = 0; index < 3; index += 1) {
+    let h3 = index;
+    h3 = document.createElement('h3');
+    main.appendChild(h3);
+}
+
+// Agora que você criou muita coisa, vamos fazer algumas alterações e remoções:
+
+// Adicione a classe title na tag h1 criada;
+
+h1 = document.querySelector('h1');
+let title1 = document.createElement('title');
+h1.appendChild(title1);
+
+// Adicione a classe description nas 3 tags h3 criadas;
+
+let h31 = document.querySelector('main').children[3];
+h31.className = 'descripition';
+
+// Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
+
+main = document.querySelector('main');
+main.removeChild(sectionL);
+
+// Centralize a section criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto da section ;
+
+sectionR = document.getElementsByClassName("right-content");
+sectionR[0].style.marginRight = 'auto';
+sectionR[0].style.width = '50%'
+
+// Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+
+sectionC = document.querySelector('.center-content');
+sectionC.style.backgroundColor = 'green';
+
+// Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+
+sectionR =document.querySelector('.right-content');
+sectionR.removeChild(ul);
+
+sectionR = document.querySelector('.right-content');
+let ul2 = document.createElement('ul');
+sectionR.appendChild(ul2);
+let remove = ulLi.splice(0, 8);
+for(index = 0; index < remove.length; index += 1){
+    let removeLi = remove[index];
+    removeLi = document.createElement('li');
+    removeLi.innerText = remove[index];
+    ul2.appendChild(removeLi);
+    
+}
+
+
