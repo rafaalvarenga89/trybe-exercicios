@@ -28,13 +28,21 @@ for (index=0; index < dezDaysList.length; index+=1 ) {
     dezDaysItem.innerText = dezDays;
     daysOfMonth.appendChild(dezDaysItem);
 
-    let holiday = [4,11,25]
+    let holiday = [24,25,31]
     for (index2 = 0; index2 < holiday.length; index2 += 1) {
       let holidayList = holiday[index2];
         if (holidayList === dezDays) {
-            dezDaysItem.className = "day holiday";
+            dezDaysItem.className += " holiday "
         }
-    }    
+    }
+    
+    let friday = [4,11,18,25]
+    for (index3 = 0; index3 < friday.length; index3 += 1) {
+      let fridayList = friday[index3];
+      if (fridayList === dezDays) {
+        dezDaysItem.className += " friday "
+      }
+    }
 
     
 }
