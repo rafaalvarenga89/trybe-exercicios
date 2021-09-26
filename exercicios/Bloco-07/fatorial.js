@@ -18,3 +18,5 @@ return resultado
 }
 
 console.log(fat(10));
+
+
