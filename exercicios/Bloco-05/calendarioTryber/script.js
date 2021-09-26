@@ -51,3 +51,25 @@ for (index=0; index < dezDaysList.length; index+=1 ) {
 }
 
 createDezDaysList();
+
+function holidayButton () {
+  let buttonContainer = document.querySelector(".buttons-container");
+  let buttonHoliday = document.createElement("button");
+  buttonHoliday.id = "btn-holiday";
+  buttonHoliday.innerHTML= "Feriados"
+  buttonContainer.appendChild(buttonHoliday);
+}
+
+holidayButton();
+
+let clickButton = document.getElementById("btn-holiday");
+
+clickButton.addEventListener("click", recebeClick)
+
+function recebeClick() {
+  let holidayDays = document.querySelector(".holiday");
+  holidayDays.style.backgroundColor = "rgb(238,238,238)";
+  
+}
+
+recebeClick();
