@@ -62,14 +62,36 @@ function holidayButton () {
 
 holidayButton();
 
-let clickButton = document.getElementById("btn-holiday");
 
-clickButton.addEventListener("click", recebeClick)
 
-function recebeClick() {
-  let holidayDays = document.querySelector(".holiday");
-  holidayDays.style.backgroundColor = "rgb(238,238,238)";
-  
+function displayHolidays() {
+  let getHolidayButton = document.querySelector('#btn-holiday');
+  let getHolidays = document.querySelectorAll('.holiday')
+  let backgroundColor = 'rgb(238,238,238)';
+  let setNewColor = 'white';
+
+  getHolidayButton.addEventListener('click', function() {
+    for (let index = 0; index < getHolidays.length; index += 1) {
+      if (getHolidays[index].style.backgroundColor === setNewColor) {
+        getHolidays[index].style.backgroundColor = backgroundColor;
+      } else {
+        getHolidays[index].style.backgroundColor = setNewColor;
+      }
+    }
+  })
+};
+
+displayHolidays();
+
+
+
+function fridayButton () {
+  let buttonContainer = document.querySelector(".buttons-container");
+  let fridayButton = document.createElement("button");
+  fridayButton.id = "btn-friday";
+  fridayButton.innerHTML = "Sexta-Feira";
+  buttonContainer.appendChild(fridayButton);
 }
 
-recebeClick();
+fridayButton();
+
