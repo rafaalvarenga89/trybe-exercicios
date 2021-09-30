@@ -95,3 +95,34 @@ function fridayButton () {
 
 fridayButton();
 
+function displayFriday () {
+  let getFridayButton = document.querySelector('#btn-friday');
+  let getFriday = document.querySelectorAll('.friday');
+  let innerHTMLFriday = 'SEXTOU \o/';
+  let returnInnerHTML = [4,11,18,25];
+
+  getFridayButton.addEventListener('click', function() {
+    for(let index1 = 0; index1 < getFriday.length; index1 +=1) {
+      if (getFriday[index1].innerHTML === innerHTMLFriday) {
+        getFriday[index1].innerHTML = returnInnerHTML[index1];
+      } else {
+        getFriday[index1].innerHTML = innerHTMLFriday;
+      }
+    }
+  } )
+
+}
+
+displayFriday();
+
+let displayZoom = document.getElementById("days");
+
+displayZoom.addEventListener('mouseover', function(event) {
+  event.target.style.fontSize = '1.5em'
+
+});
+
+displayZoom.addEventListener('mouseout', function(event) {
+  event.target.style.fontSize = 'unset';
+
+});
