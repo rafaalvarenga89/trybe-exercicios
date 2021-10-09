@@ -60,9 +60,4 @@ window.onload = function() {
     
     p.style.lineHeight = `${lineHeightP}${converter}`;
 
-    
-
-
-    
-
 }
