@@ -1,0 +1,22 @@
+{
+  "name": "bloco-09",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rafaalvarenga89/trybe-exercicios.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaalvarenga89/trybe-exercicios/issues"
+  },
+  "homepage": "https://github.com/rafaalvarenga89/trybe-exercicios#readme",
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
+}
