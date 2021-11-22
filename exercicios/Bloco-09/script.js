@@ -21,3 +21,4 @@ fun1(fun2);
 
 
 console.log('FIM');
+
