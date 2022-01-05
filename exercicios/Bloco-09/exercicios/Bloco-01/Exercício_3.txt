@@ -1,0 +1,87 @@
+1.      Liste todos os processos;
+            rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ ps
+                PID TTY          TIME CMD
+            28143 pts/0    00:00:00 bash
+            47494 pts/0    00:00:00 ps
+
+2.      Agora use o comando sleep 30 & ;
+            rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ sleep 30 &
+            [1] 47625
+
+3.      Use a listagem de processos para encontrar o PID do processo que está executando o comando sleep 30 e termine a sua execução (mate o processo) ; 
+            rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ ps
+                PID TTY          TIME CMD
+            28143 pts/0    00:00:00 bash
+            47625 pts/0    00:00:00 sleep
+            47626 pts/0    00:00:00 ps
+            rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ kill %1 47625
+            rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ ps
+                PID TTY          TIME CMD
+            28143 pts/0    00:00:00 bash
+            47634 pts/0    00:00:00 ps
+            [1]+  Terminado               sleep 30
+
+4.      Execute novamente o comando sleep 30 , mas agora sem o & . Depois, faça com que ele continue executando em background;
+            rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ sleep 30
+            ^Z
+            [1]+  Parado                  sleep 30
+            rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ ps
+                PID TTY          TIME CMD
+            28143 pts/0    00:00:00 bash
+            47918 pts/0    00:00:00 sleep
+            47919 pts/0    00:00:00 ps
+            rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ bg
+            [1]+ sleep 30 &
+            rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ ps
+                PID TTY          TIME CMD
+            28143 pts/0    00:00:00 bash
+            47922 pts/0    00:00:00 ps
+            [1]+  Concluído              sleep 30
+
+5.      Crie um processo em background que rode o comando sleep por 300 segundos.
+            rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ sleep 300
+            ^Z
+            [1]+  Parado                  sleep 300
+            rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ bg
+            [1]+ sleep 300 &
+
+6.      Crie mais dois processos que rodem o comando sleep por 200 e 100 segundos, respectivamente.
+            rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ sleep 200
+            ^Z
+            [2]+  Parado                  sleep 200
+            rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ sleep 100
+            ^Z
+            [3]+  Parado                  sleep 100
+
+
+7.      Verifique que apenas o processo sleep 300 está em execução com o comando jobs . Suspenda a execução desse processo.
+            rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ jobs
+            [1]   Executando              sleep 300 &
+            [2]-  Parado                  sleep 200
+            [3]+  Parado                  sleep 100
+            rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ fg %1
+            sleep 300
+            ^Z
+            [1]+  Parado                  sleep 300
+            rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ jobs
+            [1]+  Parado                  sleep 300
+            [2]   Parado                  sleep 200
+            [3]-  Parado                  sleep 100
+
+8.      Retome a execução do processo sleep 100 em background com o comando bg .
+            rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ bg %3
+            [3]- sleep 100 &
+            rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ jobs
+            [1]+  Parado                  sleep 300
+            [2]   Parado                  sleep 200
+            [3]-  Concluído              sleep 100
+
+9.      Termine a execução de todos os processos sleep (mate os processos) .
+            rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ kill %1
+            [1]+  Terminado               sleep 300
+            rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ kill %2
+            rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ jobs
+            [2]+  Terminado               sleep 200
+
+
+

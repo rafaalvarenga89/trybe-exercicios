@@ -1,0 +1,47 @@
+# Considere o arquivo nomes.txt para os exemplos a seguir
+# Seu conteúdo inicial é:
+Ana
+Maria
+João
+
+        rafael@rafael-340XAA-350XAA-550XAA:~$ ls
+    'Área de Trabalho'   cores.txt   Documentos   Downloads   Exercícios_da_trybe   google-chrome-stable_current_amd64.deb   Imagens   Modelos   music   Música   Público   snap   Vídeos
+    rafael@rafael-340XAA-350XAA-550XAA:~$ cd Exercícios_da_trybe
+    rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe$ ls
+    exercicio_1_parte_1.txt  exercicio_1_parte_2.txt  unix_tests
+    rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe$ cd unix_tests
+    rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ ls
+    countries.txt  empty.tbt  empty.txt  phrases.txt
+    rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ cat > nomes.txt
+    Ana 
+    Maria
+    João
+# O > redireciona a saída padrão para um arquivo, sendo assim
+# caso haja algum conteúdo no arquivo, ele será substituído
+# Digite o nome "Amanda" e encerre o cat (Ctrl + D)
+    rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ cat > nomes.txt
+    Amanda
+# Resultado
+    rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ cat nomes.txt
+    Amanda
+# O >> anexa a saída padrão a um arquivo. Sendo assim, ele adiciona
+# o que for digitado ao final do arquivo em questão
+# Digite o nome "Fernanda", depois `enter` e o nome "Fabiano", e encerre o cat (Ctrl + D)
+# Resultado
+    rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ cat >> nomes.txt
+    Fernanda
+    Fabiano
+    rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ cat nomes.txt
+    Amanda
+    Fernanda
+    Fabiano
+# O | canaliza a saída do primeiro comando para a entrada do segundo,
+# dessa forma conseguimos realizar comandos de forma sucessiva
+
+# Considere que queremos uma lista com todos os nomes que contenham
+# a letra "F" e que nosso resultado esteja em ordem alfabética
+# Para isso podemos realizar o comando abaixo
+# Resultado
+    rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ grep F nomes.txt | sort
+    Fabiano
+    Fernanda

@@ -1,0 +1,47 @@
+* {
+    border: 1px solid black;
+}
+main { 
+    background-color: aqua;
+    height: 10000px;
+}
+
+section {
+    background-color: bisque;
+}
+
+input { 
+    margin-left: 20%;
+    padding: 25px;
+    display: inline-block;
+    float: left;
+}
+
+button {
+    padding: 25px;
+    display: inline-block;
+    
+}
+
+h3 {
+    padding: 10px;
+}
+
+ul , ol {
+     padding: 30px; 
+}
+
+
+
+.codigo{
+    background-color: red;
+    padding: 10px;
+}
+
+.resposta {
+    background-color: green;
+}
+
+.cond {
+    padding: 30px;
+}

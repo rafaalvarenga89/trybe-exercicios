@@ -1,0 +1,62 @@
+* {
+    border: 1px solid orange;
+    background-color: aquamarine;
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    font-size: 20px;
+}
+
+input {
+    background-color: white;
+    margin-left: 15%;
+    padding: 25px;
+    width: 150px;
+    height: 10px;
+    display: inline-block;
+    float: left;
+    font-size: 1em;
+}
+
+button {
+    padding: 25px;
+    width: 200px;
+    height: 62.5px;
+    margin-left: 2.5%;
+    vertical-align: middle;
+    display: inline-block;
+    background-color: blue;
+    color: aqua;
+    font-weight: bolder;
+      
+}
+
+button:hover {
+    color: yellow;
+}
+
+h3 {
+    padding: 10px;
+}
+
+span {
+    color: grey;
+}
+#resposta {
+    padding: 20px;
+    margin-left: 125px;
+    margin-right: 285px;
+    margin-top: 10px;;
+        
+}
+
+.cond {
+    padding: 50px;
+    padding-left: 0.5;
+}

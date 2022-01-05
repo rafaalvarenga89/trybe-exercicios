@@ -1,0 +1,46 @@
+.primary:hover {
+    border: 5px solid black;
+}
+.primary{
+    background-color: green;
+    color: orange;
+    font-style: italic;
+}
+
+.secondary:hover{
+    border: 5px solid black
+}
+.secondary{
+    background-color: greenyellow;
+    color: orangered
+}
+
+.additional:hover{
+    border: 5px solid black
+}
+
+.additional{
+    background-color: khaki;
+    color: red;
+    font-size: 2em;
+    font-style: italic;
+}
+
+.dark:hover{
+    border: 5px solid black;
+
+}
+.dark{
+    background-color: blue;
+    color: yellow;
+}
+
+.clear:hover{
+    border: 5px solid black;
+}
+
+.clear{
+    background-color: cornsilk;
+    color: orchid;
+    font-style: italic;
+}
