@@ -1,0 +1,95 @@
+1.      Na pasta unix_tests , baixe um arquivo com os nomes de todos os países do mundo utilizando o comando curl:
+                rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ 
+                rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ curl -o countries.txt "https://gist.githubusercontent.com/kalinchernev/486393efcca01623b18d/raw/daa24c9fea66afb7d68f8d69f0c4b8eeb9406e83/countries"
+
+                Comando 'curl' não encontrado, mas poder ser instalado com:
+
+                sudo snap install curl  # version 7.76.1, or
+                sudo apt  install curl  # version 7.68.0-1ubuntu2.5
+
+                Veja 'snap info curl' para versões adicionais.
+
+                rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ sudo snap install curl  # version 7.76.1
+                [sudo] senha para rafael: 
+                curl 7.76.1 de Wouter van Bommel (woutervb) instalado
+                rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ 
+                rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ curl -o countries.txt "https://gist.githubusercontent.com/kalinchernev/486393efcca01623b18d/raw/daa24c9fea66afb7d68f8d69f0c4b8eeb9406e83/countries"
+                % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                                Dload  Upload   Total   Spent    Left  Speed
+                100  1842  100  1842    0     0   2905      0 --:--:-- --:--:-- --:--:--  2937
+                rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ 
+
+2.      Mostre todo o conteúdo do arquivo countries.txt na tela.
+                rafael@rafael-340XAA-350XAA-550XAA:~$ ls
+                'Área de Trabalho'   Documentos   Downloads   Exercícios_da_trybe   google-chrome-stable_current_amd64.deb   Imagens   Modelos   music   Música   Público   snap   Vídeos
+                rafael@rafael-340XAA-350XAA-550XAA:~$ cd Exercícios_da_trybe
+                rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe$ ls
+                exercicio_1_parte_1.txt  exercicio_1_parte_2.txt  unix_tests
+                rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe$ cd unix_tests
+                rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ ls
+                countries.txt
+                rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ less countries.txt
+
+3.      Mostre o conteúdo de countries.txt , página por página, até encontrar a Zambia .
+                Ctrl+D até encontrar Zambia
+                Tecla Q para sair.
+
+4.      Mostre novamente o conteúdo de countries.txt página por página, mas agora utilize um comando para buscar por Zambia .
+                rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ less countries.txt
+                /Zambia
+
+5.      Busque por Brazil no countries.txt .
+                rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ grep 'Brazil' countries.txt
+                Brazil
+
+6.      Busque novamente por brazil , mas agora utilizando o lower case .
+                rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ grep -i 'brazil' countries.txt
+                Brazil
+
+Para os próximos exercícios, crie um novo arquivo chamado phrases.txt e adicione algumas frases à sua escolha. Não precisa criar o arquivo pelo terminal.
+                rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ cat > phrases.txt
+                São José dos Campos é muito quente.
+                São Bernardo do Campo é muito frio.
+                A tendência é usar uma blusa em São Bernardo do Campo.
+
+7.      Busque pelas frases que não contenham a palavra fox .
+                rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ grep -iv 'fox' phrases.txt
+                São José dos Campos é muito quente.
+                São Bernardo do Campo é muito frio.
+                A tendência é usar uma blusa em São Bernardo do Campo.
+8.      Conte o número de palavras do arquivo phrases.txt .
+                rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ wc -w phrases.txt
+                25 phrases.txt
+9.      Conte o número de linhas do arquivo phrases.txt .
+                rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ wc -l phrases.txt
+                3 phrases.txt
+
+10.     Crie os arquivos empty.tbt e empty.pdf .
+                rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ touch empty.tbt
+                rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ touch empty.txt
+                rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ ls
+                countries.txt  empty.tbt  empty.txt  phrases.txt
+
+11.     Liste todos os arquivos do diretório unix_tests .
+                rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ ls
+                countries.txt  empty.tbt  empty.txt  phrases.txt
+
+12.     Liste todos os arquivos que terminem com txt .
+                rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ ls *.txt
+                countries.txt  empty.txt  phrases.txt
+
+13.     Liste todos os arquivos que terminem com tbt ou txt .
+                rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ ls *.t?t
+                countries.txt  empty.tbt  empty.txt  phrases.txt
+
+14.     Acesse o manual do comando ls .
+                rafael@rafael-340XAA-350XAA-550XAA:~$ man ls
+                LS(1)                            User Commands                           LS(1)
+
+                NAME
+                ls - list directory contents
+
+                SYNOPSIS
+                ls [OPTION]... [FILE]...
+
+               (...)

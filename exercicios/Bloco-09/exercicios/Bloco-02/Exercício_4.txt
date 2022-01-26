@@ -1,0 +1,97 @@
+Durante seu curso na Trybe , seus projetos serão entregues através de pushes nos repositórios do GitHub . 
+Para podermos simular um exercício feito, você criará um arquivo .txt com um nome de sua escolha (Exemplo: trybe-skills.txt ) e utilizará o conteúdo abaixo.
+    rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ cat > arquivogit.html
+    O que vou aprender na Trybe:
+    Unix
+    Bash
+    Git
+    rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ ls -l
+    total 32
+    -rw-rw-r-- 1 rafael rafael   43 jul 26 12:21 arquivogit.html
+    -rw-rw-r-- 1 rafael rafael    8 jul 24 21:06 arquivo.txt
+    -rw-r--r-- 1 rafael rafael 1969 jul 24 23:24 bunch_of_things.txt
+    -rw-rw-r-- 1 rafael rafael 1842 jul 22 19:37 countries.txt
+    -rw-rw-r-- 1 rafael rafael    0 jul 23 15:53 empty.tbt
+    -rw-rw-r-- 1 rafael rafael    0 jul 23 15:53 empty.txt
+    -rw-rw-r-- 1 rafael rafael   24 jul 24 14:37 nomes.txt
+    -rw-rw-r-- 1 rafael rafael  127 jul 24 23:19 phrases2.txt
+    -rw-rw-r-- 1 rafael rafael  135 jul 23 15:37 phrases.txt
+    -rw-rw-r-- 1 rafael rafael   50 jul 24 23:06 skills2.txt
+    -rw-rw-r-- 1 rafael rafael    0 jul 24 22:58 skills.txt
+
+Agora vamos transformar essa pasta em um repositório Git :
+    Retorne para a raiz da pasta de exercícios;
+    rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe$ cd unix_tests
+
+Inicialize o repositório com git init ;    
+    rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ git init
+    Initialized empty Git repository in /home/rafael/Exercícios_da_trybe/unix_tests/.git/
+
+Crie um arquivo de README utilizando o comando touch README.md ;   
+    rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ touch README.md
+    rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ git status
+    No ramo master
+
+    No commits yet
+
+    Arquivos não monitorados:
+    (utilize "git add <arquivo>..." para incluir o que será submetido)
+        README.md
+        arquivo.txt
+        arquivogit.html
+        bunch_of_things.txt
+        countries.txt
+        empty.tbt
+        empty.txt
+        nomes.txt
+        phrases.txt
+        phrases2.txt
+        skills.txt
+        skills2.txt
+
+    nada adicionado ao envio mas arquivos não registrados estão presentes (use "git add" to registrar)
+
+Crie um commit inicial utilizando:
+
+    rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ git add README.md
+    rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ git commit -m "Comitando o arquivo README.md"
+    [master (root-commit) e3349a2] Comitando o arquivo README.md
+    1 file changed, 0 insertions(+), 0 deletions(-)
+    create mode 100644 README.md
+
+Vá até o seu GitHub e crie um repositório público , onde você irá guardar todos os exercícios que desenvolverá ao longo do curso;
+Dê ao repositório um nome descritivo, como por exemplo trybe-exercicios ;
+⚠️ Lembre-se de não inicializar o repositório com um arquivo README.md , pois você já criou um nos passos anteriores! 😉
+Clique no botão SSH e então copie a URL do repositório;
+Execute o comando para adicionar a URL ao repositório local git remote add origin "URL_DO_REPOSITÓRIO" ;
+
+    rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ git remote add origin "git@github.com:rafaalvarenga89/trybe-exercicios.git"
+    rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ 
+
+Verifique se tudo está certo com sua URL remota utilizando o comando git remote -v . Seu terminal deve conter algo similar a isso:
+
+    rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ git remote -v
+    origin	git@github.com:rafaalvarenga89/trybe-exercicios.git (fetch)
+    origin	git@github.com:rafaalvarenga89/trybe-exercicios.git (push)
+
+Em que john-snow corresponde ao seu username e know-nothing ao nome que você deu ao seu repositório;
+Agora que tudo está devidamente configurado e verificado, é hora de subir seu primeiro commit para o GitHub ! 🤩
+Execute o comando git push origin master no terminal;
+
+    rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ git branch
+    * master
+    rafael@rafael-340XAA-350XAA-550XAA:~/Exercícios_da_trybe/unix_tests$ git push origin master
+    Warning: Permanently added the RSA host key for IP address '140.82.114.4' to the list of known hosts.
+    Enumerating objects: 3, done.
+    Counting objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 238 bytes | 238.00 KiB/s, done.
+    Total 3 (delta 0), reused 0 (delta 0)
+    To github.com:rafaalvarenga89/trybe-exercicios.git
+    * [new branch]      master -> master
+    
+Agora que tal adicionar uma descrição do que é seu repositório no README.md ? 💪🏼.
+O README.md que você recriou é referente ao repositório trybe-exercicios , tendo isso em mente é interessante que você adicione informações relacionadas ao curso da Trybe e o que você está desenvolvendo e o que irá desenvolver;
+Uma outra coisa interessante a se fazer é adicionar um README.md dentro do diretório de exercícios do dia para colocar a descrição dos exercícios que você desenvolveu;
+Lembre-se de fazer um commit quando terminar de alterar os arquivos;
+Depois do commit , faça sempre um push ;
+Confira as alterações no GitHub .

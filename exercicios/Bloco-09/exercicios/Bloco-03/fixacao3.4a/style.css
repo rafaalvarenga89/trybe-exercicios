@@ -1,0 +1,51 @@
+body{
+    font-size: 20px;
+    height: 100%;
+    
+
+}
+
+header, nav, main, article, footer, aside, section{
+    border: 5px solid red;
+    padding: 20px;
+}
+
+#header {
+    width: 1;
+    display: block;
+}
+
+nav{
+    
+    width: 1;
+    
+}
+
+#group{
+    height: 1100px;
+}
+
+#article{
+    float: left;
+    height: 1;
+    width: 69%;
+    display: block;
+}
+
+#section{
+    height: 1;
+}
+
+
+#aside {
+    float: right;
+    height: 1;
+    padding-left: 10px;
+    width: 20%;
+}
+
+.nav-links li{
+    display: inline-block;
+    margin-right: 50px;
+    margin-left: 50px;
+}
