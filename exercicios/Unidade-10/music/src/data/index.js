@@ -1,0 +1,77 @@
+const music = [
+    {
+    id: 1,
+    name: 'SpiritBox',
+    image:`https://www.tenhomaisdiscosqueamigos.com/wp-content/uploads/2021/09/spiritbox-banda-foto.jpg` ,
+    bestSingles: ['Rule of Nines', 'Belcarra', 'Holly Roller', 'Secret Garden', 'Circle With Me'],
+    genre: 'Heavy Metal Band',
+    country: 'Canadá 🇨🇦', 
+    },
+    {
+    id: 2,
+    name: 'Anna Calvi',
+    image:`http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcTsxRMbRbHh0yTQP-DHKOYm_xJa-UmCbTHHE0JZnrpuGn0oQhZieMpJXN-PoXYM` ,
+    bestSingles: ['Suzanne and I', 'Eliza', 'Swimming Pool', 'Rider to the Sea', 'The Devil'],
+    genre: 'Indie Rock',
+    country: 'Reino Unido 🇬🇧' , 
+    },
+    {
+    id: 3,
+    name: 'Larkin Poe',
+    image:`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX3XmK60reT3cUvbD6Bar1wfgGvW8MlvorFQ&usqp=CAU` ,
+    bestSingles: ['Mississipi', "She's A Self Made Man", 'Holy Ghost Fire', 'Mad as a Hatter'],
+    genre: 'Blues',
+    country: 'Estados Unidos 🇺🇸 ', 
+    },
+    {
+    id: 4,
+    name: 'Blues Pills',
+    image:`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHwi3g6HSR9dtO1zb55CKg8kMgqkjhR5GC3L2P8SP8SPXimzTK-DTYmQbLBOrF-DF3p40&usqp=CAU` ,
+    bestSingles: ['High Class Woman', 'Bliss', 'River', 'No Hope Left For Me', 'Lady In Gold', 'Low Road', 'Kiss My Past Goodbye'],
+    genre: 'Rock',
+    country: 'Suécia 🇸🇪' , 
+    },
+    {
+    id: 5,
+    name: 'Jinjer',
+    image:`https://roadiecrew.com/wp-content/uploads/jinjer-2-scaled-e1626380699553.jpg` ,
+    bestSingles: ['Disclosure!', 'Pisces', 'Perennial', 'Judgement and Punishment' ],
+    genre: 'Metal Progressivo',
+    country: 'Ucrânia 🇺🇦'  , 
+    },
+    {
+    id: 6,
+    name: 'Beth Hart',
+    image:`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4NsMENh6x-CLzSdppLM1CLwCu5KloZFllQA&usqp=CAU` ,
+    bestSingles: ['Love is a Lie', 'Woman Down', 'Baddest Blues' ],
+    genre: 'Blues',
+    country: 'Estados Unidos 🇺🇸', 
+    },
+    {
+    id: 7,
+    name: 'Adele',
+    image:`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrPWLNxPJtyXSAbELSwVgxmSuZBEMHdzGmNA&usqp=CAU` ,
+    bestSingles: ['Oh My God', "I'll Be Waiting", 'Rolling in the Deep', 'SkyFall', 'Take it All' ],
+    genre: 'Soul/Pop',
+    country: 'Reino Unido 🇬🇧' , 
+    },
+    {
+    id: 8,
+    name: 'Joss Stone',
+    image:`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb3YbeMKiEI7EcSh2eKUl-F05p9CnLWyHm5bTcIzKO7FgW1UIL` ,
+    bestSingles: ['Super Duper Love', 'Never Forget My Love', "Breaking Each Other's Hearts" ],
+    genre: 'Soul/Pop',
+    country: 'Reino Unido 🇬🇧' , 
+    },
+    {
+    id: 9,
+    name: 'Lana Del Rey',
+    image:`https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTi5Hq9mVHpvELWwzWwJwkxpQqc9BPo4XE6CtvsoOTSTzn0xfTo` ,
+    bestSingles: ['Blue Jeans', 'Summertime Sadness', 'Doin Time', 'Mariners Apartment Complex' ],
+    genre: 'Pop',
+    country: 'Estados Unidos 🇺🇸' , 
+    },
+  
+];
+
+export default music
