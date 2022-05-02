@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Redux dark mode example </title>
+        <!-- CDN DO REDUX -->
+        <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+
+    <body>
+        <main id="wrapper" class="dark">
+            <div>
+              <img
+                id="light-bulb"
+                src="images/light.png"
+                alt="lampada"
+              />
+              <button id="switch">
+                <img
+                  src="images/interruptor.png"
+                  alt="interruptor"
+                />
+              </button>
+            </div>
+            <div>
+              <button id="light-button">
+                Light
+              </button>
+              <button id="dark-button">
+                Dark
+              </button>
+            </div>
+          </main>
+          <script>
+            // === ACTION_TYPES ===
+            const CHANGE_LIGHT = 'CHANGE_LIGHT'; 
+            const CHANGE_DARK = 'CHANGE_DARK';
+            const SWITCH_THEME = 'SWITCH_THEME';
+              // === REDUCER ===
+              const INITIAL_STATE = {
+                  theme: 'dark',
+                  name: 'Luanderson',
+                  class: 'BOMD+',
+              }
+
+              const reducer = (state = INITIAL_STATE, action) => {
+                //   console.log('opa, estou ouvindo', action)
+                switch(action.type){
+                    case 'CHANGE_LIGHT':
+                        return{ ...state, theme: 'light' }
+                    case 'CHANGE_DARK':
+                        return{ ...state, theme: 'dark' }    
+                        case 'SWITCH_THEME':
+                        return{ ...state, theme: state.theme === 'dark' ? 'light' : 'dark' }    
+
+                        default:
+                        return state
+                }
+            }
+             
+              // === STORE ===
+              const store = Redux.createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+              console.log(store);
+
+              // === ACTION ===
+              const actionChangeLight = () => {
+                  console.log('chamou');
+                  store.dispatch({type: 'CHANGE_LIGHT'});
+              }
+              const actionChangeDark = () => {
+                  store.dispatch({type: 'CHANGE_DARK'});
+              }
+              const actionSwitchTheme = () => {
+                  store.dispatch({type: 'SWITCH_THEME'});
+              }
+             
+              const lightButton = document.getElementById('light-button');
+              lightButton.addEventListener('click', actionChangeLight)
+
+              const darkButton = document.getElementById('dark-button');
+              darkButton.addEventListener('click', actionChangeDark)
+
+              const switchButton = document.getElementById('switch');
+              switchButton.addEventListener('click', actionSwitchTheme)
+
+
+
+              store.subscribe(() => {
+                //   console.log('Mudança no estado')
+                // console.log(store.getState())
+                const { theme } = store.getState();
+                const mainElement = document.getElementById('wrapper');
+                mainElement.className = theme;
+              });
+          </script>
+    </body>
+</html>
