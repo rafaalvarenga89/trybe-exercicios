@@ -1,0 +1,10 @@
+.card-currency {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 4px;
+  margin: 4px;
+}
